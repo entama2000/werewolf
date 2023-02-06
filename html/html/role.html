@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang=ja dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>人狼</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="entama Inc" />
+  <meta name="copyright" content="entama Inc" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <!-- icons -->
+  <link rel="icon" href="../img/entamajpLogo.png">
+
+
+  <!-- font -->
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Kaushan+Script|Dancing+Script|Mansalva|Kosugi|Sawarabi+Mincho|Noto+Serif+JP&display=swap" rel="stylesheet">
+
+  <!-- css,js -->
+  <link rel="stylesheet" href="../css/base.css" media="all">
+  <link rel="stylesheet" href="../css/main.css" media="all">
+  <script type="text/javascript" src="../js/jquery-3.6.0.js"></script>
+  <script type="text/javascript" src="../js/role.js"></script>
+
+</head>
+<body>
+  <div class="bodyKonoSite">
+    <h1><p>人狼ゲーム</p></h1>
+
+    <!-- 配役設定 -->
+    <h2>役職選択</h2>
+    <p class="showCiv" style="font-size: 120%;">---市民陣営---</p>
+
+    <div class="role_civ">
+        <p>--市民--</p>
+        <p id="civ_num">1027人</p>
+    </div>
+
+    <div class="roles">
+      <p>--占い師--</p>
+      <div class="cp_ipselect cp_sl01">
+          <select id="role_uranai" required>
+            <option value="0">0人</option>
+            <option value="1">1人</option>
+          </select>
+      </div>
+    </div>
+
+    <div class="roles">
+      <p>--騎士--</p>
+      <div class="cp_ipselect cp_sl01">
+          <select id="role_kishi" required>
+            <option value="0">0人</option>
+            <option value="1">1人</option>
+          </select>
+      </div>
+    </div>
+
+    <div class="roles">
+      <p>--霊媒師--</p>
+      <div class="cp_ipselect cp_sl01">
+          <select id="role_reibai" required>
+            <option value="0">0人</option>
+            <option value="1">1人</option>
+          </select>
+      </div>
+    </div>
+
+    <div class="roles">
+      <p>--怪盗--</p>
+      <div class="cp_ipselect cp_sl01">
+          <select id="role_kaitou" required>
+            <option value="0">0人</option>
+            <option value="1">1人</option>
+          </select>
+      </div>
+    </div>
+
+    <div class="roles">
+      <p>--猫又--</p>
+      <div class="cp_ipselect cp_sl01">
+          <select id="role_nekomata" required>
+            <option value="0">0人</option>
+            <option value="1">1人</option>
+          </select>
+      </div>
+    </div>
+
+    <p class="showWolf" style="font-size: 120%; margin-top: 40px;">---人狼陣営---</p>
+
+    <div class="roles">
+      <p>--人狼--</p>
+      <div class="cp_ipselect cp_sl01">
+          <select id="role_werewolf" required>
+            <option value="1">1人</option>
+            <option value="2">2人</option>
+            <option value="3">3人</option>
+          </select>
+      </div>
+    </div>
+
+    <div class="roles">
+      <p>--狂人--</p>
+      <div class="cp_ipselect cp_sl01">
+          <select id="role_kyojin" required>
+            <option value="0">0人</option>
+            <option value="1">1人</option>
+          </select>
+      </div>
+    </div>
+
+    <p class="showFox" style="font-size: 120%; margin-top: 40px;">---第3陣営---</p>
+
+    <div class="roles">
+      <p>--妖狐--</p>
+      <div class="cp_ipselect cp_sl01">
+          <select id="role_fox" required>
+            <option value="0">0人</option>
+            <option value="1">1人</option>
+          </select>
+      </div>
+    </div>
+
+    <div class="roles">
+      <p>--吊人--</p>
+      <div class="cp_ipselect cp_sl01">
+          <select id="role_Teruteru" required>
+            <option value="0">0人</option>
+            <option value="1">1人</option>
+          </select>
+      </div>
+    </div>
+
+
+    <!-- ルール設定 -->
+    <h2 style="margin-top: 50px;">ルール選択</h2>
+    <div class="roles">
+      <p>--初夜殺し--</p>
+      <p style="font-size: 100%;">なし: 初日に人狼による<br>殺害がありません。</p>
+      <p style="font-size: 100%;">あり: 初日に人狼による<br>殺害があります。</p>
+      <div class="cp_ipselect cp_sl01">
+          <select id="rule_firstdaykill" required>
+            <option value="0">なし</option>
+            <option value="1">あり</option>
+          </select>
+      </div>
+    </div>
+
+    <div class="roles">
+      <p>--初夜占い--</p>
+      <p style="font-size: 100%;">なし: 初日に占い師による<br>占いがありません。</p>
+      <p style="font-size: 100%;">あり: 初日に占い師による<br>占いがあります。</p>
+      <div class="cp_ipselect cp_sl01">
+          <select id="rule_firstdayuranai" required>
+            <option value="0">なし</option>
+            <option value="1">あり(人狼妖狐以外ランダム占い)</option>
+            <option value="2">あり(通常占い)</option>
+          </select>
+      </div>
+    </div>
+
+    <div class="roles">
+      <p>--連続ガード--</p>
+      <p style="font-size: 100%;">なし: 騎士は2日連続同じ人を<br>守れません。</p>
+      <p style="font-size: 100%;">あり: 騎士は連日で同じ人を<br>守れます。</p>
+      <div class="cp_ipselect cp_sl01">
+          <select id="rule_guards" required>
+            <option value="0">なし</option>
+            <option value="1">あり</option>
+          </select>
+      </div>
+    </div>
+
+    <p id="roleBackBtn" class="button019" style="margin-top: 45px;">人数設定に戻る</p>
+
+    <p id="roleNextBtn" class="button019" style="margin-top: 45px;">始める</p>
+
+  </div>
+
+  <div class="cr">
+    <small>Copyright © 2022 entama Inc. All Rights Reserved.</small>
+  </div>
+
+</body>
+</html>

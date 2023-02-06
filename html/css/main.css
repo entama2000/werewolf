@@ -1,0 +1,306 @@
+/* body */
+body {
+  background-color: black;
+}
+
+.bodyKonoSite {
+  margin: 20px 20px 5px 20px;
+  background: rgb(99, 0, 0);
+  /*width: 100%;*/
+  overflow: hidden;
+  color: rgb(255, 213, 213);
+  font-family:'メイリオ', 'Meiryo','ＭＳ ゴシック','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+  padding-bottom: 50px;
+}
+
+/* copy right */
+.cr {
+  text-align: center;
+  font-size: 80%;
+  color: rgb(218, 252, 255);
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+/* h1 */
+h1 {
+  text-align: center;
+  margin: 25px 0;
+}
+h1 p {
+  font-size: 200%;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  padding: 0 55px;
+}
+
+h1 p:before, h1 p:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 45px;
+  height: 2px;
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+}
+
+h1 p:before {
+  left:0;
+}
+h1 p:after {
+  right: 0;
+}
+
+/* h2 */
+h2 {
+  text-align: center;
+  font-size: 120%;
+  margin: 25px 0;
+}
+
+/* description */
+.desc {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* 名前等の表示 */
+.show
+{
+  text-align: center;
+  font-size: 180%;
+  font-weight: bold;
+  background: -webkit-linear-gradient(#ffffff 0%, #b8fbff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* button */
+/* 019 */
+.button019 {
+  background: rgb(200, 200, 200);
+  border-radius: 3px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 200px;
+  padding: 10px 25px;
+  color: #313131;
+  transition: 0.3s ease-in-out;
+  font-weight: 500;
+}
+.button019:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  right: 2rem;
+  font-size: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.3s;
+  width: 6px;
+  height: 6px;
+  border-top: solid 2px currentColor;
+  border-right: solid 2px currentColor;
+  transform: translateY(-50%) rotate(45deg);
+}
+  .button019:hover {
+  background: #bc0000;
+  color: #FFF;
+  cursor: pointer;
+  cursor: hand;
+}
+.button019:hover:after {
+  right: 1.4rem;
+}
+
+/* ボタン小 */
+.btn-flat-border {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 150px;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: #ffb7b7;
+  border: solid 2px #ffb7b7;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+.btn-flat-border:hover {
+  background: #ff3a58;
+  color: white;
+  cursor: pointer;
+  cursor: hand;
+}
+
+/* プルダウン */
+.cp_ipselect {
+	overflow: hidden;
+	width: 90%;
+  max-width: 550px;
+	margin: 2em auto;
+	text-align: center;
+}
+.cp_ipselect select {
+	width: 100%;
+	padding-right: 1em;
+	cursor: pointer;
+	text-indent: 0.01px;
+	text-overflow: ellipsis;
+	border: none;
+	outline: none;
+	background: transparent;
+	background-image: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+	appearance: none;
+}
+.cp_ipselect select::-ms-expand {
+    display: none;
+}
+.cp_ipselect.cp_sl01 {
+	position: relative;
+	border: 1px solid #bbbbbb;
+	border-radius: 2px;
+	background: #ffffff;
+}
+.cp_ipselect.cp_sl01::before {
+	position: absolute;
+	top: 0.8em;
+	right: 0.9em;
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #666666;
+	pointer-events: none;
+}
+.cp_ipselect.cp_sl01 select {
+	padding: 8px 38px 8px 8px;
+	color: #666666;
+}
+
+/* 入力欄 */
+.textInput {
+  width: 80%; /*親要素いっぱい広げる*/
+  max-width: 350px;
+  margin: 5px;
+  padding: 10px 15px; /*ボックスを大きくする*/
+  font-size: 16px;
+  border-radius: 3px; /*ボックス角の丸み*/
+  border: 2px solid #ddd; /*枠線*/
+  box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+}
+
+/* role */
+/* civ */
+.role_civ {
+  margin: 10px 20%;
+  text-align: center;
+  border: solid 0.5px;
+}
+@media (max-width: 600px) {
+  .role_civ {
+    margin: 10px 5%;
+  }
+}
+@media (min-width: 1280px) {
+  .role_civ {
+    margin: 10px 30%;
+  }
+}
+
+.role_civ p {
+  margin: 10px;
+  font-size: 120%;
+}
+
+/* others */
+.roles {
+  margin: 10px 20%;
+  text-align: center;
+  border: solid 0.5px;
+}
+@media (max-width: 600px) {
+  .roles {
+    margin: 10px 5%;
+  }
+}
+@media (min-width: 1280px) {
+  .roles {
+    margin: 10px 30%;
+  }
+}
+
+.roles p {
+  margin: 10px;
+  font-size: 120%;
+}
+
+/* 各役職 */
+.roleImg {
+  text-align: center;
+}
+.roleImg img {
+  width: 80%;
+  max-width: 350px;
+  margin-bottom: 30px;
+}
+
+.showCiv
+{
+  text-align: center;
+  font-size: 180%;
+  font-weight: bold;
+  background: -webkit-linear-gradient(#ffffff 0%, #b8fbff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.showWolf
+{
+  text-align: center;
+  font-size: 180%;
+  font-weight: bold;
+  background: -webkit-linear-gradient(#ffffff 0%, #ff0000 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.showFox
+{
+  text-align: center;
+  font-size: 180%;
+  font-weight: bold;
+  background: -webkit-linear-gradient(#ffffff 0%, #fffa77 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.showTeruteru
+{
+  text-align: center;
+  font-size: 180%;
+  font-weight: bold;
+  background: -webkit-linear-gradient(#ffffff 0%, #7f7f7f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 死人文字 */
+.deathp {
+  font-size: 120%;
+  text-shadow: 2px 2px 5px rgb(255, 155, 155);
+  font-weight: bold;
+}
+
+/* 要素編集 */
+.display-none {
+  display: none;
+}

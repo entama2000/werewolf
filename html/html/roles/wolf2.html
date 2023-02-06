@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang=ja dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>人狼</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="entama Inc" />
+  <meta name="copyright" content="entama Inc" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <!-- icons -->
+  <link rel="icon" href="../../img/entamajpLogo.png">
+
+
+  <!-- font -->
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Kaushan+Script|Dancing+Script|Mansalva|Kosugi|Sawarabi+Mincho|Noto+Serif+JP&display=swap" rel="stylesheet">
+
+  <!-- css,js -->
+  <link rel="stylesheet" href="../../css/base.css" media="all">
+  <link rel="stylesheet" href="../../css/main.css" media="all">
+  <script type="text/javascript" src="../../js/jquery-3.6.0.js"></script>
+  <script type="text/javascript" src="../../js/roles/wolf2.js"></script>
+
+</head>
+<body>
+  <div class="bodyKonoSite">
+    <h1><p>人狼ゲーム</p></h1>
+    <h2>あなたの役職は</h2>
+    <div class="roleImg">
+      <img src="../../img/cards/werewolf.jpg">
+    </div>
+    <p class="showWolf">人狼</p>
+    <h2>　です。</h2>
+    <p class="desc">屋敷に集まった人々の中に潜む、恐怖の人狼。
+    <br>毎夜指定した人物を襲撃し殺害することができる。
+    <br>市民陣営の数を人狼と同じかそれより少なくすると勝利となる。</p>
+
+    <h2>夜のアクション</h2>
+    <p class="desc">以下より、殺害したい人を選んでください。<br>(3票まで)</p>
+    <div id="susAdd" style="text-align: center;">
+      <!-- ここに疑わしいプレイヤー選択が入る -->
+    </div>
+
+    <p id="civNextBtn" class="button019" style="margin-top: 45px;">決定</p>
+
+  </div>
+
+  <div class="cr">
+    <small>Copyright © 2022 entama Inc. All Rights Reserved.</small>
+  </div>
+
+</body>
+</html>
+
