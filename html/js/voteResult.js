@@ -19,7 +19,7 @@ $(function() {
         votes.push(localStorage.getItem(2000+i)-'0');
     }
 
-    alert("投票は終了です。\nゲームマスターに端末を渡して下さい。")
+    alert("投票は終了です。\nゲームマスターに端末を渡して下さい。");
 
     /* 殺害処理 */
     var killedn = 0;

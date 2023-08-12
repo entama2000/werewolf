@@ -16,21 +16,7 @@ $(function() {
         roles.push(localStorage.getItem(100+i)-'0');
         votes.push(localStorage.getItem(2000+i)-'0');
     }
-    //死んでいた場合の処理
-    if(roles[player-1] < 0 && player < n)
-    {
-        localStorage.setItem("player", player+1);
-        window.location.href = "./vote.html";
-    }
-    else if(roles[player-1] < 0 && player == n)
-    {
-        localStorage.setItem("player", 1);
-        window.location.href = "./voteResult.html";
-    }
-    else //生きている人
-    {
-        alert(names[player-1] + "の投票です。")
-    }
+    //alert(names[player-1] + "の投票です。");
 
     $("#yourName").text(names[player-1]);
     for(var i = 1; i <= n; i++)
@@ -60,7 +46,7 @@ $(function() {
         {
             alert("投票数が多すぎます。")
         }
-        else if(player < n) //夜のアクションフェーズ確認
+        else if(player < n) //投票フェーズ確認
         {
             //votes更新
             for(var i = 1; i <= n; i++)
@@ -74,7 +60,7 @@ $(function() {
                 localStorage.setItem(2000+i, votes[i-1]);
             //ページ推移
             localStorage.setItem("player", player+1);
-            window.location.href = "./vote.html";
+            window.location.href = "./checkVote.html";
         }
         else if(player == n)
         {

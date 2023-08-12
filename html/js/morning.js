@@ -22,7 +22,7 @@ $(function() {
         votes.push(localStorage.getItem(2000+i)-'0');
     }
 
-    alert("夜のターンは終了です。\nゲームマスターに端末を渡して下さい。")
+    alert("夜のターンは終了です。\nゲームマスターに端末を渡して下さい。");
 
     /* 殺害処理 */
     //投票数が被った場合、ランダムでひとり選ぶ
@@ -217,7 +217,7 @@ $(function() {
         for(var i = 1; i <= n; i++)
             localStorage.setItem(2000+i, 0);
         /* 投票スタート */
-        window.location.href = "./vote.html";
+        window.location.href = "./checkVote.html";
     });
 
 });
