@@ -45,10 +45,11 @@ $(function() {
     $("#civNextBtn").click(function() {
         var sum = 0;
         var id = -1;
+        var canGuardSameTarget = (rule1002 != 0) || (kishi == -1);
         for(var i = 1; i <= n; i++)
         {
             //生きている人のみ
-            if(roles[i-1] > 0 && i != player && i != kishi)
+            if(roles[i-1] > 0 && i != player && (canGuardSameTarget || i != kishi))
             {
                 ids = "#kishi" + i;
                 sum += ($(ids).val() - '0');

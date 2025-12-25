@@ -31,7 +31,10 @@ $(function() {
     $("#addAndRem").before("<h2 id=\"ChangePlayerName\">プレイヤー名変更</h2>");
     for(var i = 1; i <= n; i++)
     {
-      $("#addAndRem").append("<input id=\"name" + i + "\" type=\"text\" value=" + names[i-1] + " class=\"textInput\"><br>");
+      var inputValue = (names[i-1] == null) ? "" : names[i-1];
+      $("#addAndRem")
+        .append($("<input>", { id: "name" + i, type: "text", "class": "textInput" }).val(inputValue))
+        .append("<br>");
     }
   }
   else
@@ -50,7 +53,10 @@ $(function() {
     n = $(this).val();
     for(var i = 1; i <= n; i++)
     {
-      $("#addAndRem").append("<input id=\"name" + i + "\" type=\"text\" value=" + names[i-1] + " class=\"textInput\"><br>");
+      var inputValue = (names[i-1] == null) ? "" : names[i-1];
+      $("#addAndRem")
+        .append($("<input>", { id: "name" + i, type: "text", "class": "textInput" }).val(inputValue))
+        .append("<br>");
     }
   });
 

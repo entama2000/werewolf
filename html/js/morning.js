@@ -22,6 +22,15 @@ $(function() {
         votes.push(localStorage.getItem(2000+i)-'0');
     }
 
+    // 騎士が生存していないのに、過去の「守り先(1202)」が残っていると
+    // 襲撃が不正に無効化されるため、ここでガード判定を無効化する。
+    var hasLivingKishi = 0;
+    for(var i = 0; i < n; i++)
+        if(roles[i] == 202)
+            hasLivingKishi = 1;
+    if(!hasLivingKishi)
+        kishi = -1;
+
     alert("夜のターンは終了です。\nゲームマスターに端末を渡して下さい。");
 
     /* 殺害処理 */
